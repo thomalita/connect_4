@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: #023603;
+    background-color: #182828;
 }
 h1 {
     text-align: center;
@@ -13,6 +13,7 @@ h1 {
     grid-template-columns: repeat(5, auto);
     justify-content: space-evenly;
     place-items: center;
+    border-radius: 10%;
     border:5px solid black; 
     display:grid; 
     flex-wrap:wrap; 
@@ -20,10 +21,20 @@ h1 {
     width:330px; 
     background: white;
 }
-.grid-item {
+.grid div {
     height:40px; 
     width:40px; 
     margin: 3px;
     border: 3px solid black;
     border-radius: 50%;
+    background-color: #182828;
+}
+
+.playerOne {
+    background-color: gold;
+
+}
+
+.playerQueen {
+    background-color: #9B111E;
 }
