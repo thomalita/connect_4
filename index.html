@@ -4,37 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js" charset="utf-8"></script>
+    <script defer src="main.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
     <title>Connect 4</title>
 </head>
 <body>
-    <h1>CONNECT 4</h1>
-    <h3>Connect four coins to escape the Queen's wrath!</h3>
+    <h1>ESCAPE THE QUEENS WRATH</h1>
+    <h3>Connect four coins to escape and live another day!</h3>
 <div class ="grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class = "items" id ='a0'></div>
+        <div class = "items" id ='a1'></div>
+        <div class = "items" id ='a2'></div>
+        <div class = "items" id ='a3'></div>
+        <div class = "items" id ='a4'></div>
+        <div class = "items" id ='a5'></div>
+        <div class = "items" id ='a6'></div>
+
+        <div class = "items" id ='b0'></div>
+        <div class = "items" id ='b1'></div>
+        <div class = "items" id ='b2'></div>
+        <div class = "items" id ='b3'></div>
+        <div class = "items" id ='b4'></div>
+        <div class = "items" id ='b5'></div>
+        <div class = "items" id ='b6'></div>
+
+        <div class = "items" id ='c0'></div>
+        <div class = "items" id ='c1'></div>
+        <div class = "items" id ='c2'></div>
+        <div class = "items" id ='c3'></div>
+        <div class = "items" id ='c4'></div>
+        <div class = "items" id ='c5'></div>
+        <div class = "items" id ='c6'></div>
+
+        <div class = "items" id ='d0'></div>
+        <div class = "items" id ='d1'></div>
+        <div class = "items" id ='d2'></div>
+        <div class = "items" id ='d3'></div>
+        <div class = "items" id ='d4'></div>
+        <div class = "items" id ='d5'></div>
+        <div class = "items" id ='d6'></div>
+
+        <div class = "items" id ='e0'></div>
+        <div class = "items" id ='e1'></div>
+        <div class = "items" id ='e2'></div>
+        <div class = "items" id ='e3'></div>
+        <div class = "items" id ='e4'></div>
+        <div class = "items" id ='e5'></div>
+        <div class = "items" id ='e6'></div>
+
+        <div class = "items" id ='taken'></div>
+        <div class = "items" id ='taken'></div>
+        <div class = "items" id ='taken'></div>
+        <div class = "items" id ='taken'></div>
+        <div class = "items" id ='taken'></div>
+        <div class = "items" id ='taken'></div>
+        <div class = "items" id ='taken'></div>
+
 </div>
 
-    <h3 class="currentPlayer">Current Player is </h3>
+    <h3>Current Player is <span id = 'currentPlayer'>1</span> </h3>
+    <h3 id="result"></h3>
     <button id ="restartButton">Restart</button>
 
 </body>
