@@ -1,29 +1,32 @@
 // define variables & add functions
-const currentPlayer=document.querySelector("#currentPlayer");
-const restart=document.querySelector(".restart")
-const result=document.querySelector('#result')
-
-
+const displayCurrentPlayer = document.querySelector("#currentPlayerNum");
+const restart = document.querySelector(".restart")
+const result = document.querySelector('#result')
+let currentPlayer = 1
 const circle = document.querySelectorAll('.items')
-let nextColor = 'red'
+
+
+//functions, change colors as players are changing
     for(let i = 0; i < circle.length; i++) {
         circle[i].addEventListener("click", (e) => {
-            // console.log(e.target)
-            e.target.classList.toggle('gold')     
-         })
-    nextColor == 'red'?(nextColor='gold') : (nextColor = 'red'); 
+    if(currentPlayer === 1){
+        e.target.classList.toggle('gold')
+        circle[i].classList.add('playerOne')
+        currentPlayer=2
+        displayCurrentPlayer.innerHTML = currentPlayer
+        checkWinner()
+}  else{
+        e.target.classList.toggle('red')
+        circle[i].classList.add('playerTwo')
+        currentPlayer=1
+        displayCurrentPlayer.innerHTML = currentPlayer
+        checkWinner()
 }
+    }, {once: true})
+}   
+         
 
-
-
-
-
-
-
-
-
-let playerOne=1
- 
+//42 variations of wins since grid is 6*7 
 const winningCombo = [
     [0, 1, 2, 3], [41, 40, 39, 38],[7, 8, 9, 10], 
     [34, 33, 32, 31], [14, 15, 16, 17], [27, 26, 25, 24], 
@@ -50,76 +53,27 @@ const winningCombo = [
     [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34] 
 ];
 
+//winning conditions
 function checkWinner () {
-    for (let i=0; i<winningCombo.length; i++){
-        const box1= circle[winningCombo[i][0]]
-        const box2= circle[winningCombo[i][1]]
-        const box3= circle[winningCombo[i][2]]
-        const box4= circle[winningCombo[i][3]]
+    for (let y = 0; y < winningCombo.length; y++){
+        const box1 = circle[winningCombo[y][0]]
+        const box2 = circle[winningCombo[y][1]]
+        const box3 = circle[winningCombo[y][2]]
+        const box4 = circle[winningCombo[y][3]]
     
     if (box1.classList.contains('playerOne') && 
         box2.classList.contains('playerOne') &&
         box3.classList.contains('playerOne') &&
         box4.classList.contains('playerOne')
     ){
-        result.innerHTML='Player One Wins'  
+        result.innerText='Player One Wins'  
     }
-    if (box1.classList.contains('playerQueen') && 
-        box2.classList.contains('playerQueen') &&
-        box3.classList.contains('playerQueen') &&
-        box4.classList.contains('playerQueen')
+    if (box1.classList.contains('playerTwo') && 
+        box2.classList.contains('playerTwo') &&
+        box3.classList.contains('playerTwo') &&
+        box4.classList.contains('playerTwo')
     ){
-        result.innerHTML = 'The Queen Wins!'
+        result.innerText = 'The Queen Wins!'
     }
 }
 }
-
-
-
-// const playerTurn = 
-// function changeColor (){
-//     let circle = document.querySelector('gold');
-//         circle.classList.toggle('red')
-// }
-// document.querySelector('circle').addEventListener("click", changeColor);
-
-        // function toggleClass() {
-    //     if style.classList.contains('gold')
-    //     style.classList.remove('gold'){
-    //         else{
-    //             stlye.classList.add('playerQueen')
-    //         }
-    //     }
-    // }
-
-
-
-        //  if (circle[i + 7].classList.contains ('taken')){
-        //     if(currentPlayer==1) {
-        //         circle[i].classList.add('taken')
-        //         circle[i].classList.add('playerOne')
-        //         currentPlayer = 2 
-        //         displayCurrentPlayer.innerHTML = currentPlayer
-        //     }
-        // } 
-
-
-
-
-
-
-    //     const playerOne 
-//     for(let i=0; i<)
-// }
-// let gold = playerOne
-
-// circle.onclick = function(){
-//     if(circle.classList.contains('.red')){
-//         gold.classList.replace('red', 'gold');
-//     }
-// }
-
-
-
-
-
