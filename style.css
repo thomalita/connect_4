@@ -44,8 +44,9 @@ h4 {
     flex-wrap:wrap; 
     height:426px; 
     width:500px; 
-    background: url(https://img.freepik.com/premium-photo/shiny-yellow-leaf-gold-foil_38679-857.jpg?w=1480);
+    background: url(https://wallpapercave.com/wp/wp2249188.jpg);
 }
+
 .grid div {
     height:55px; 
     width:55px; 
@@ -53,7 +54,7 @@ h4 {
     border: 3px solid black;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 8px black;
 }
 
 
