@@ -1,12 +1,40 @@
 body {
     text-align: center;
-    background-color: #182828;
+    background: url(https://getwallpapers.com/wallpaper/full/c/2/e/984045-best-gothic-desktop-wallpaper-2560x1440.jpg);  
+    background-size: 900px
 }
 h1 {
     text-align: center;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10%;
+    padding: 10px;
+    text-shadow: 0 0 10px red;
 }
 
+h2 {
+    text-align: center;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10%;
+    padding: 8px;
+}
+
+h4 {
+    background-color: white;
+    padding: 8px;
+    border: 5px solid black;
+}
+ h3 {
+    background-color: black;
+    color: red;
+    text-shadow: 0 0 10px black;
+    display: inline-block;
+ }
+
+
 .grid {
+    margin: auto;
     grid-template-columns: repeat(7, auto);
     justify-content: space-evenly;
     place-items: center;
@@ -16,7 +44,7 @@ h1 {
     flex-wrap:wrap; 
     height:426px; 
     width:500px; 
-    background: #cbc3e3;
+    background: url(https://img.freepik.com/premium-photo/shiny-yellow-leaf-gold-foil_38679-857.jpg?w=1480);
 }
 .grid div {
     height:55px; 
@@ -25,15 +53,19 @@ h1 {
     border: 3px solid black;
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0 0 5px black;
 }
 
+
+
+
 .red {
-    background-color: #460004;
+    background-color: #6d0c12;
 }
 
 
 .gold {
-    background-color: gold;
+    background-color: black;
 
 }
 

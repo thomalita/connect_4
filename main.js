@@ -1,6 +1,5 @@
 // define variables & add functions
 const displayCurrentPlayer = document.querySelector("#currentPlayerNum");
-const restart = document.querySelector(".restart")
 const result = document.querySelector('#result')
 let currentPlayer = 1
 const circle = document.querySelectorAll('.items')
@@ -27,6 +26,10 @@ const circle = document.querySelectorAll('.items')
          
 
 //42 variations of wins since grid is 6*7 
+
+
+
+
 const winningCombo = [
     [0, 1, 2, 3], [41, 40, 39, 38],[7, 8, 9, 10], 
     [34, 33, 32, 31], [14, 15, 16, 17], [27, 26, 25, 24], 
@@ -53,7 +56,7 @@ const winningCombo = [
     [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34] 
 ];
 
-//winning conditions
+//winning conditions, not including a draw function. 
 function checkWinner () {
     for (let y = 0; y < winningCombo.length; y++){
         const box1 = circle[winningCombo[y][0]]
@@ -66,7 +69,8 @@ function checkWinner () {
         box3.classList.contains('playerOne') &&
         box4.classList.contains('playerOne')
     ){
-        result.innerText='Player One Wins'  
+        result.innerText='Player One Wins' 
+        return false
     }
     if (box1.classList.contains('playerTwo') && 
         box2.classList.contains('playerTwo') &&
@@ -74,6 +78,12 @@ function checkWinner () {
         box4.classList.contains('playerTwo')
     ){
         result.innerText = 'The Queen Wins!'
+        return false
     }
 }
 }
+
+//Decided not to mess with a restart button. 
+
+
+//source: winningCombo, google. Cant find the source :(
