@@ -25,7 +25,22 @@ const circle = document.querySelectorAll('.items')
 }   
          
 
-//42 variations of wins since grid is 6*7 
+//42 variations of wins,  grid is 6*7 
+
+let row1 = ['a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6']
+let row2 = ['b0', 'b1', 'b2', 'b3', 'b4', 'b5', 'b6']
+let row3 = ['c0', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6']
+let row4 = ['d0', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6']
+let row5 = ['e0', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6']
+let row6 = ['f0', 'f1', 'f2', 'f3', 'f4', 'f5', 'f6']
+
+let col1 = ['a0', 'b0', 'c0', 'd0', 'e0', 'f0']
+let col2 = ['a1', 'b1', 'c1', 'd1', 'e1', 'f1']
+let col3 = ['a3', 'b3', 'c3', 'd3', 'e3', 'f3']
+let col4 = ['a4', 'b4', 'c4', 'd4', 'e4', 'f4']
+let col5 = ['a5', 'b5', 'c5', 'd5', 'e5', 'f5']
+let col6 = ['a6', 'b6', 'c6', 'd6', 'e6', 'f6']
+let col7 = ['a7', 'b7', 'c7', 'd7', 'e7', 'f7']
 
 
 
@@ -70,15 +85,15 @@ function checkWinner () {
         box4.classList.contains('playerOne')
     ){
         result.innerText='Player One Wins' 
-        return false
+        
     }
     if (box1.classList.contains('playerTwo') && 
         box2.classList.contains('playerTwo') &&
         box3.classList.contains('playerTwo') &&
         box4.classList.contains('playerTwo')
     ){
-        result.innerText = 'The Queen Wins!'
-        return false
+        result.innerText = 'The Queen Wins! Back to the cell you go.'
+        
     }
 }
 }
